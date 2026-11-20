@@ -1,0 +1,3 @@
+# Assignment 7 — Discord-style Chat
+
+I used three tables: users, channels and messages, because each message belongs to one user and one channel. I used BIGSERIAL for the IDs because the server could grow to millions of messages, and I used TIMESTAMPTZ for message time because users can be from different countries and the time zone matters. I used foreign keys between messages and users/channels so a message cannot refer to a user or channel that does not exist. I deliberately do not store direct messages, edited messages or extra information that is not needed for this assignment.
